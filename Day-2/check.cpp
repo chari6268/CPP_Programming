@@ -20,3 +20,20 @@ Sample Input 3 :
 Sample Output 3 :
 -1
 */
+
+#include<stdio.h>
+int main(){
+    char ch;
+    printf("Enter a Character : ");
+    scanf("%c",&ch);
+    int flag = 0;
+    if((ch >= 'A' && ch <= 'Z')){
+        flag = 1;
+    }else if((ch >= 'a' && ch <= 'z')){
+        flag = 0;
+    }else{
+        flag  = -1;
+    }
+    printf("%d\n",flag);
+    return 0;
+}

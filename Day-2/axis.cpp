@@ -16,3 +16,17 @@ Sample Output 2:
 
 
 */
+#include<stdio.h>
+int main(){
+    int  n;
+    char d;
+    scanf("%d %c",&n,&d);
+    if(d=='R'||d=='r'){
+        printf("(%d,0)\n",n);
+    }else if(d=='L'||d=='l'){
+        printf("(-%d,0)",n);
+    }else{
+        printf("please  enter only R or r for Right and only L or l for Left\n");
+    }
+    return 0;
+}

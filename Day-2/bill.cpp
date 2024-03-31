@@ -21,3 +21,24 @@ Sample Input 1:
 Sample Output 1:
 354.00
 */
+
+#include <stdio.h>
+int main() {
+    int units;
+    float total_cost = 0;
+    printf("Enter the number of units consumed: ");
+    scanf("%d", &units);
+    if (units <= 50) {
+        total_cost = units * 0.50;
+    } else if (units <= 150) {
+        total_cost = 50 * 0.50 + (units - 50) * 0.75;
+    } else if (units <= 250) {
+        total_cost = 50 * 0.50 + 100 * 0.75 + (units - 150) * 1.20;
+    } else {
+        total_cost = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (units - 250) * 1.50;
+    }
+    total_cost *= 1.20;
+    printf("Total electricity bill: %.2f\n", total_cost);
+
+    return 0;
+}

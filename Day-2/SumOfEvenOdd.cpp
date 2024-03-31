@@ -7,3 +7,21 @@ Input: n = 1986.
 Output: 14 10
 
 */
+
+#include<stdio.h>
+int main() {
+    int n, rem, sum_even=0,sum_odd=0;
+    printf("Enter a number : ");
+    scanf("%d", &n);
+    while(n != 0) {
+        rem = n % 10;
+        n /= 10;
+        if (rem % 2 == 0)
+            sum_even += rem;
+        else
+            sum_odd += rem;
+    }
+    printf("\n%d %d\n", sum_even,sum_odd);
+    
+    return 0;
+}

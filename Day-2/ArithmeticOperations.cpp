@@ -17,3 +17,30 @@ Sample Input 1:
 Sample Output 1:
 32
 */
+
+#include<stdio.h>
+int main(){
+    int a,b;
+    char c;
+    scanf("%d %c %d",&a,&c,&b);
+    switch (c) {
+        case '+' : 
+            printf("%d\n",a+b);
+            break;
+        case '-' : 
+            printf("%d\n",a-b);
+            break;
+        case '*' : 
+            printf("%d\n",a*b);
+            break;
+        case '/' : 
+            if(b!=0){
+                printf("%d\n",a/b);
+            }else{
+                printf("Error! Division By Zero.\n");
+            }
+            break;
+        default : printf("Error! Invalid Operator.\n");
+    }
+    return 0;
+}
