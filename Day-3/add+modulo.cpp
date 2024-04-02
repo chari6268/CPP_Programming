@@ -13,3 +13,14 @@ Explanation:
 = 582344006
 
 */
+
+#include <iostream>
+using namespace std;
+int main() {
+    unsigned long long a,b,sum,res;
+    cin>>a >>b;
+    sum=a+b;
+    res=sum%(1000000000+7);
+    cout<<res;
+    return 0;
+}

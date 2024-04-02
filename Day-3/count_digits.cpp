@@ -8,3 +8,34 @@ Input: N = 120
 Output: 199
 
 */
+#include <bits/stdc++.h>
+using namespace std;
+int fact(int n);
+int count(int f);
+int main() 
+{
+    int n,f,c;
+    cin>>n;
+    f=fact(n);
+    cout<<"The factorial is "<<f<<endl;
+    c=count(f);
+    cout<<"The number of digits in "<<f<<" are "<<c<<endl;
+    return 0;
+}
+int fact(int n)
+{
+    int fact=1,i;
+    for(i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    return fact;
+}
+int count(int num){
+    int count = 0;
+    while (num != 0) {
+      num /= 10;
+      ++count;
+    }
+    return count;
+}

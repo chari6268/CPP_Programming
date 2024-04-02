@@ -9,3 +9,28 @@ Ex:
 n == 10
 The starting triangular numbers are 1, 3 (1+2), 6 (1+2+3), 10 (1+2+3+4).
 */
+#include <iostream>
+using namespace std;
+bool isTriangular(int n) {
+    int sum = 0;
+    for (int i = 1; sum < n; i++) {
+        sum += i;
+        if (sum == n) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int main() {
+    int n;
+    cout << "Enter a number: ";
+    cin >> n;
+    if (isTriangular(n)) {
+        cout << n << " is a triangular number." << endl;
+    } else {
+        cout << n << " is not a triangular number." << endl;
+    }
+
+    return 0;
+}
