@@ -25,7 +25,7 @@ Sample Output 1:
 #include <stdio.h>
 int main() {
     int units;
-    float total_cost = 0;
+    float total_cost = 0,surcharge=0;
     printf("Enter the number of units consumed: ");
     scanf("%d", &units);
     if (units <= 50) {
@@ -37,7 +37,10 @@ int main() {
     } else {
         total_cost = 50 * 0.50 + 100 * 0.75 + 100 * 1.20 + (units - 250) * 1.50;
     }
-    total_cost *= 1.20;
+    surcharge = total_cost * 0.20;
+    total_cost = total_cost + surcharge;
+    
+    
     printf("Total electricity bill: %.2f\n", total_cost);
 
     return 0;
