@@ -20,3 +20,32 @@ Sample Output 1 :
 24 
 
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+int sum_pro(int n,int q){
+    if(q == 1){
+        int s=0;
+        for(int i=1;i<=n;i++){
+            s+=i;
+        }
+        return s;
+    }else if(q == 2){
+        int p=1;
+        for(int i=1;i<=n;i++){
+            p*=i;
+        }
+        return p;
+    }else{
+        return -1;
+    }
+}
+int main(){
+    int t;cin>>t;
+    while(t--){
+        int n , q;
+        cin>>n>>q;
+        cout<<sum_pro(n,q)<<endl;
+    }
+    return 0;
+}
